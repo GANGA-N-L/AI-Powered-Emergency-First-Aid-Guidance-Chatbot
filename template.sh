@@ -1,0 +1,20 @@
+#Creating the directories
+mkdir -p src
+mkdir -p research
+
+
+#Creating the files
+touch src/__init__.py
+touch src/helper.py
+touch src/prompt.py
+
+touch research/trials.ipynb
+
+
+touch .env
+touch setup.py
+touch app.py
+touch requirements.txt
+
+
+echo "Directories and files are created succesfully!."
