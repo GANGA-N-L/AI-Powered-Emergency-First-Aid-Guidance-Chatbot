@@ -1,0 +1,29 @@
+#Langchain
+langchain==0.3.26
+langchain-community==0.3.26
+langchain-openai==0.3.24
+
+
+#LLM
+openai>=1.0.0
+
+
+#HuggingFace
+sentence-transformers==4.1.0
+
+
+#Vector database
+langchain-pinecone==0.2.8
+
+
+#Backend & Frontend framework 
+flask==3.1.1
+
+#Environment variables
+python-dotenv==1.1.0
+
+
+#PDF processing
+pypdf==5.6.1
+
+-e .
