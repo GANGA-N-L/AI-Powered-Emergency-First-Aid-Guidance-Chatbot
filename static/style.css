@@ -1,71 +1,77 @@
 body {
+    font-family: 'Segoe UI', sans-serif;
+    background: linear-gradient(135deg, #f0f4f8, #d9e4f5);
     margin: 0;
-    font-family: Arial, sans-serif;
-    background-color: #f4f8fb;
+    padding: 0;
 }
 
 .container {
-    width: 50%;
-    margin: auto;
-    margin-top: 40px;
+    width: 600px;
+    margin: 40px auto;
     background: white;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
-    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
 }
 
 .header {
+    background: #e63946;
+    color: white;
+    padding: 20px;
     text-align: center;
-    margin-bottom: 20px;
 }
 
 .chat-box {
+    padding: 20px;
     height: 400px;
     overflow-y: auto;
-    border: 1px solid #ddd;
-    padding: 15px;
-    border-radius: 8px;
-    background-color: #fafafa;
+    background: #f8f9fa;
 }
 
 .user-message {
-    text-align: right;
-    background-color: #d1ecf1;
-    padding: 10px;
-    border-radius: 8px;
+    background: #457b9d;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 15px 15px 0 15px;
     margin: 10px 0;
+    max-width: 75%;
+    align-self: flex-end;
 }
 
 .bot-message {
-    text-align: left;
-    background-color: #f8d7da;
-    padding: 10px;
-    border-radius: 8px;
+    background: #e9ecef;
+    padding: 12px 15px;
+    border-radius: 15px 15px 15px 0;
     margin: 10px 0;
+    max-width: 75%;
 }
 
 .input-section {
     display: flex;
-    margin-top: 15px;
+    padding: 15px;
+    border-top: 1px solid #ddd;
 }
 
 input {
     flex: 1;
     padding: 10px;
-    border-radius: 6px;
+    border-radius: 10px;
     border: 1px solid #ccc;
 }
 
 button {
-    padding: 10px 15px;
     margin-left: 10px;
-    background-color: #dc3545;
+    background: #e63946;
     color: white;
     border: none;
-    border-radius: 6px;
+    padding: 10px 18px;
+    border-radius: 10px;
     cursor: pointer;
+    transition: 0.3s;
 }
 
 button:hover {
-    background-color: #c82333;
+    background: #c82333;
 }
