@@ -154,11 +154,20 @@ AI-Powered-Emergency-First-Aid-Guidance-Chatbot/
 ├── LICENSE
 └── README.md
 
+```
+
+---
+
+
 ## ⚠ Disclaimer
 
 This application is for educational purposes only.  
 It does NOT replace professional medical advice.  
 In case of serious emergencies, contact medical professionals immediately.
+
+
+---
+
 
 ## 🔮 Future Improvements
 
@@ -168,3 +177,4 @@ In case of serious emergencies, contact medical professionals immediately.
 - Add user authentication
 - Improve retrieval with re-ranking
 
+---
