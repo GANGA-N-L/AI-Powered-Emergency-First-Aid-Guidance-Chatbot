@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>AI Emergency First Aid Chatbot</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="header">
+        <h1>🚑 AI Emergency First Aid Assistant</h1>
+        <p>Get instant first aid guidance during emergencies</p>
+    </div>
+
+    <div class="chat-box" id="chat-box"></div>
+
+    <div class="input-section">
+        <input type="text" id="user-input" placeholder="Describe the emergency..." />
+        <button onclick="sendMessage()">Send</button>
+    </div>
+
+</div>
+
+<script>
+async function sendMessage() {
+    const inputField = document.getElementById("user-input");
+    const chatBox = document.getElementById("chat-box");
+
+    const userText = inputField.value;
+    if (!userText) return;
+
+    chatBox.innerHTML += `<div class="user-message">${userText}</div>`;
+    inputField.value = "";
+
+    const response = await fetch("/chat", {
+        method: "POST",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({ message: userText })
+    });
+
+    const data = await response.json();
+
+    let formattedAnswer = data.answer
+    .replace(/\n/g, "<br>")
+    .replace(/(\d+\.)/g, "<br><strong>$1</strong>");
+
+    chatBox.innerHTML += `
+        <div class="bot-message">
+            ${formattedAnswer}
+        </div>
+    `;
+
+    chatBox.scrollTop = chatBox.scrollHeight;
+}
+</script>
+
+</body>
+</html>
