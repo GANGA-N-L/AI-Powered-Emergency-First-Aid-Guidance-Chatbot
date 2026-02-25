@@ -1,11 +1,10 @@
 #Langchain
 langchain==0.3.26
 langchain-community==0.3.26
-langchain-openai==0.3.24
 
 
 #LLM
-openai>=1.0.0
+ollama==0.17.0
 
 
 #HuggingFace

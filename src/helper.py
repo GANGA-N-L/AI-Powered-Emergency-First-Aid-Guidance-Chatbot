@@ -59,3 +59,7 @@ def create_embedding_model():
     )
 
     return embedding_model
+
+
+
+
